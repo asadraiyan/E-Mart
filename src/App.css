@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@300&family=Satisfy&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Courgette', cursive;
+  letter-spacing: 2px;
+  color: rgb(123, 123, 245);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 70px;
   align-items: center;
+  justify-content: space-around;
+  /* border: 2px solid blue; */
+  position: fixed;
+  width: 100%;
+  background-color: #f3f3f3;
+  /* box-shadow: 1px 1px 1px 1px rgb(184, 180, 180); */
+
+
+
+
+}
+
+.navlink {
+  display: flex;
+  /* border: 2px solid green; */
+  gap: 2rem;
+  align-items: center;
+  color: black;
+}
+
+.navlink a,
+.sideNav a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+
+}
+
+.sideNav {
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: rgba(38, 36, 36, 0.9);
+  align-items: center;
+  width: 200px;
+  height: calc(100vh - 70px);
+  gap: 3rem;
+  padding-top: 20px;
+  transition: 0.3s all ease;
+  z-index: -3;
+}
+
+.hidden {
+  left: -100%;
+}
+
+.menu-icons {
+  font-size: 23px;
+
+}
+
+.login-container {
+  /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 350px;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.login {
+  font-size: 16px;
+  padding: 5px 14px 5px 5px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.register {
+  font-size: 16px;
+  padding: 5px 14px 5px 5px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.cart {
+  font-size: 16px;
+  padding: 5px 14px 5px 5px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icons {
+  margin-left: 10px;
 }
