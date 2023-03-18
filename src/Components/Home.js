@@ -1,5 +1,6 @@
 import React from 'react'
 import Introimg from '../assets/bg-img2.webp'
+import Products from './Products'
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
                 <h1 className='heading'>NEW SEASON ARRIVALS</h1>
                 <p className='paragraph'>CHECK OUT ALL THE TRENDS</p>
             </div>
+            <Products />
         </div>
     )
 }

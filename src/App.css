@@ -111,6 +111,21 @@
   cursor: pointer;
 }
 
+.login:hover {
+  background-color: rgb(48, 45, 45);
+  color: white;
+}
+
+.register:hover {
+  background-color: rgb(48, 45, 45);
+  color: white;
+}
+
+.cart:hover {
+  background-color: rgb(48, 45, 45);
+  color: white;
+}
+
 .icons {
   margin-left: 10px;
 }
@@ -158,4 +173,120 @@
   font-size: 25px;
   color: white;
   letter-spacing: 2px;
+}
+
+.product-container {
+  /* border: 2px solid red; */
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.latest {
+  /* border: 2px solid green; */
+  width: 90%;
+  /* height: 250px; */
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid black;
+  margin-top: 50px;
+}
+
+.btn-container {
+  /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 50px;
+  width: 650px;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.btn-icons {
+  font-size: 16px;
+  padding: 7px 10px 7px 10px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-icons:hover {
+  background-color: rgb(48, 45, 45);
+  color: white;
+}
+
+.card-wrapper {
+  display: flex;
+  /* border: 2px solid blue; */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.card-container {
+  border: 1px solid grey;
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-img {
+  width: 225px;
+  height: 260px;
+  /* border: 2px solid green; */
+}
+
+.card-body {
+  width: 215px;
+  height: 110px;
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-title {
+  font-size: 23px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.buy-now {
+  font-size: 16px;
+  padding: 5px 8px 5px 8px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.buy-now:hover {
+  background-color: rgb(48, 45, 45);
+  color: white;
 }
