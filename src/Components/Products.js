@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Skeleton from 'react-loading-skeleton'
+import CardContent from './CardContent'
 
 const Products = () => {
 	const [data, setData] = useState()
-	const [filter, setFilter] = useState(data)
+	const [filteredData, setFilteredData] = useState()
 	const [loading, setLoading] = useState(false)
 	let componentMounted = true
 	useEffect(() => {
@@ -12,9 +13,9 @@ const Products = () => {
 			const response = await fetch("https://fakestoreapi.com/products")
 			if (componentMounted) {
 				setData(await response.clone().json())
-				setFilter(await response.json())
+				setFilteredData(await response.json())
 				setLoading(false)
-				console.log(filter)
+				// console.log(filteredData)
 			}
 			return () => {
 				componentMounted = false
@@ -43,14 +44,18 @@ const Products = () => {
 	}
 
 	const filterProduct = (filterCategory) => {
+		console.log("data =", data)
 		const updatedList = data.filter((x) => x.category === filterCategory)
-		setFilter(updatedList)
+		setFilteredData(updatedList)
 	}
+
+	// console.log("filteredData =", filteredData)
+
 	const ShowProducts = () => {
 		return (
 			<>
 				<div className="btn-container">
-					<button className='btn-icons' onClick={() => setFilter(data)}>Gallery</button>
+					<button className='btn-icons active' onClick={() => setFilteredData(data)}>Gallery</button>
 					<button className='btn-icons' onClick={() => filterProduct("men's clothing")}>Men's Clothing</button>
 					<button className='btn-icons' onClick={() => filterProduct("women's clothing")}>Women's Clothing</button>
 					<button className='btn-icons' onClick={() => filterProduct("jewelery")}>Jewellery</button>
@@ -58,26 +63,15 @@ const Products = () => {
 				</div>
 				<div className="card-wrapper">
 					{
-						filter.map((product) => {
+						Array.isArray(filteredData) && filteredData.map((product) => {
 							return (
 								<>
-									<div className="card-container" key={product.id}>
-										<img src={product.image} alt={product.title} className='card-img' />
-										<div className="card-body">
-											<h4 className='card-title'>{product.title.substring(0, 12)}...</h4>
-											<p className='price'>${product.price}</p>
-											<button className='buy-now'>Buy Now</button>
-										</div>
-									</div>
+									<CardContent product={product} key={product.id} />
 								</>
 							)
 						})
 					}
 				</div>
-
-
-
-
 			</>
 		)
 

@@ -10,6 +10,7 @@ import { useMediaQuery } from "react-responsive";
 const Navbar = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
     const [showMediaIcons, setshowMediaIcons] = useState(true)
+    const [activeClass, setActiveClass] = useState("Home")
 
     const handleClick = () => {
         setshowMediaIcons(!showMediaIcons)
@@ -21,17 +22,18 @@ const Navbar = () => {
                     <span>NAWAB'S COLLECTION</span>
                 </div>
                 <div className={isMobile ? (showMediaIcons ? "sideNav hidden" : "sideNav") : "navlink"}>
-                    <Link to="/" onClick={handleClick}>Home</Link>
-                    <Link to="/Products" onClick={handleClick}>Products</Link>
-                    <Link to="/About" onClick={handleClick}>About</Link>
-                    <Link to="/Contact" onClick={handleClick}>Contact</Link>
-
-                </div>
-                <div className="login-container">
-
+                    <div className={activeClass === "Home" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Home") }}>
+                        <Link to="/">Home</Link>
+                    </div>
+                    <Link to="/Products" className={activeClass === "Products" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Products") }}>Products</Link>
+                    <Link to="/About" className={activeClass === "About" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("About") }}>About</Link>
+                    <Link to="/Contact" className={activeClass === "Contact" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Contact") }}>Contact</Link>
+                    {/* <div className="login-container"> */}
                     <button className='login'><MdLogin className='icons' />Login</button>
                     <button className='register'><FaUserPlus className='icons' />Register</button>
                     <button className='cart'><FaShoppingCart className='icons' />Cart(0)</button>
+                    {/* </div> */}
+
                 </div>
                 {isMobile ? (
                     <div className="menu-icons" onClick={handleClick}>
