@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import Products from './Components/Products';
 import About from './Components/About';
 import Contact from './Components/Contact';
+import ProductCard from './Components/ProductCard';
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Products" element={<Products />} />
+          <Route exact path="/Products/:id" element={<ProductCard />} />
           <Route exact path="/About" element={<About />} />
           <Route exact path="/Contact" element={<Contact />} />
         </Routes>

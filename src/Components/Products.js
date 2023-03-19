@@ -6,6 +6,7 @@ const Products = () => {
 	const [data, setData] = useState()
 	const [filteredData, setFilteredData] = useState()
 	const [loading, setLoading] = useState(false)
+	const [activeBtn, setActiveBtn] = useState("Gallery")
 	let componentMounted = true
 	useEffect(() => {
 		const getProducts = async () => {
@@ -55,11 +56,11 @@ const Products = () => {
 		return (
 			<>
 				<div className="btn-container">
-					<button className='btn-icons active' onClick={() => setFilteredData(data)}>Gallery</button>
-					<button className='btn-icons' onClick={() => filterProduct("men's clothing")}>Men's Clothing</button>
-					<button className='btn-icons' onClick={() => filterProduct("women's clothing")}>Women's Clothing</button>
-					<button className='btn-icons' onClick={() => filterProduct("jewelery")}>Jewellery</button>
-					<button className='btn-icons' onClick={() => filterProduct("electronics")}>Electronics</button>
+					<button className={`btn-icons ${activeBtn === "Gallery" && "active-btn"}`} onClick={() => { setFilteredData(data); setActiveBtn("Gallery") }}>Gallery</button>
+					<button className={`btn-icons ${activeBtn === "men's clothing" && "active-btn"}`} onClick={() => { filterProduct("men's clothing"); setActiveBtn("men's clothing") }}>Men's Clothing</button>
+					<button className={`btn-icons ${activeBtn === "women's clothing" && "active-btn"}`} onClick={() => { filterProduct("women's clothing"); setActiveBtn("women's clothing") }}>Women's Clothing</button>
+					<button className={`btn-icons ${activeBtn === "jewelery" && "active-btn"}`} onClick={() => { filterProduct("jewelery"); setActiveBtn("jewelery") }}>Jewellery</button>
+					<button className={`btn-icons ${activeBtn === "electronics" && "active-btn"}`} onClick={() => { filterProduct("electronics"); setActiveBtn("electronics") }}>Electronics</button>
 				</div>
 				<div className="card-wrapper">
 					{
