@@ -8,7 +8,7 @@ const CardContent = ({ product }) => {
             <div className="card-body">
                 <h4 className='card-title'>{product.title.substring(0, 12)}...</h4>
                 <p className='price'>${product.price}</p>
-                <Link to={`/ProductCard/${product.id}`} className='buy-now'>Buy Now</Link>
+                <Link to={`/Product/${product.id}`} className='buy-now'>Buy Now</Link>
             </div>
         </div>
     )

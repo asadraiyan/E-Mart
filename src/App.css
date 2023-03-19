@@ -100,23 +100,6 @@
 
 }
 
-/* .register {
-  font-size: 16px;
-  padding: 5px 14px 5px 5px;
-  background-color: white;
-  border-radius: 4px;
-  cursor: pointer;
-
-}
-
-.cart {
-  font-size: 16px;
-  padding: 5px 14px 5px 5px;
-  background-color: white;
-  border-radius: 4px;
-  cursor: pointer;
-} */
-
 .login:hover {
   background-color: rgb(48, 45, 45);
   color: white;
@@ -303,3 +286,165 @@
   background-color: rgb(48, 45, 45);
   color: white;
 }
+
+.box-container {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.img-box,
+.box-img {
+  /* border: 2px solid blue; */
+  width: 400px;
+  height: 400px;
+  margin-left: 40px;
+}
+
+.desc-container {
+  /* border: 2px solid yellow; */
+  width: 600px;
+  height: 400px;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 40px;
+
+}
+
+.head {
+  font-size: 25px;
+  color: grey;
+}
+
+.title {
+  font-size: 35px;
+
+}
+
+.product-price {
+  font-size: 35px;
+  margin-top: 15px;
+}
+
+.product-desc {
+  font-size: 20px;
+  color: grey;
+  margin-top: 15px;
+}
+
+.product-rating {
+  font-weight: bolder;
+}
+
+.cart-btn {
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 4px 6px 4px 6px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-btn:hover {
+  background-color: rgb(48, 45, 45);
+  color: white;
+}
+
+/* loader css start from here  */
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: black;
+  animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* loader css end here  */

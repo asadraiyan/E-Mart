@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Skeleton from 'react-loading-skeleton'
 import CardContent from './CardContent'
+import "react-loading-skeleton/dist/skeleton.css";
+import Loader from './Loader';
 
 const Products = () => {
 	const [data, setData] = useState()
@@ -25,32 +27,11 @@ const Products = () => {
 		getProducts()
 	}, [])
 
-	const Loading = () => {
-		return (
-			<>
-				<div className="loading-container">
-					<Skeleton height={350} />
-				</div>
-				<div className="loading-container">
-					<Skeleton height={350} />
-				</div>
-				<div className="loading-container">
-					<Skeleton height={350} />
-				</div>
-				<div className="loading-container">
-					<Skeleton height={350} />
-				</div>
-			</>
-		)
-	}
-
 	const filterProduct = (filterCategory) => {
-		console.log("data =", data)
 		const updatedList = data.filter((x) => x.category === filterCategory)
 		setFilteredData(updatedList)
 	}
 
-	// console.log("filteredData =", filteredData)
 
 	const ShowProducts = () => {
 		return (
@@ -83,7 +64,7 @@ const Products = () => {
 				<h1>Latest Products</h1><hr />
 			</div>
 			<div className="boxes">
-				{loading ? <Loading /> : <ShowProducts />}
+				{loading ? <Loader /> : <ShowProducts />}
 			</div>
 		</div>
 	)
