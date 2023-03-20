@@ -39,7 +39,7 @@ const ProductCard = () => {
                         <h3 className='product-price'>$ {product.price}</h3>
                         <p className='product-desc'>{product.description}</p>
                         <button className='cart-btn' onClick={() => addProduct(product)}>Add to cart</button>
-                        <Link to="/Cart" className='cart-btn'>Go to cart</Link>
+                        <Link to="/cart" className='cart-btn'>Go to cart</Link>
 
                     </div>
                 </div>
