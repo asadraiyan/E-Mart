@@ -38,8 +38,8 @@ const ProductCard = () => {
                         <p className='product-rating'>Rating {product.rating && product.rating.rate}<BiStar /></p>
                         <h3 className='product-price'>$ {product.price}</h3>
                         <p className='product-desc'>{product.description}</p>
-                        <button className='cart-btn' onClick={() => addProduct(product)}>Add to cart</button>
-                        <Link to="/cart" className='cart-btn'>Go to cart</Link>
+                        <button className='button-btn' onClick={() => addProduct(product)}>Add to cart</button>
+                        <Link to="/cart" className='button-btn'>Go to cart</Link>
 
                     </div>
                 </div>

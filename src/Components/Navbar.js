@@ -13,6 +13,7 @@ const Navbar = () => {
     const [showMediaIcons, setshowMediaIcons] = useState(true)
     const [activeClass, setActiveClass] = useState("Home")
 
+
     const handleClick = () => {
         setshowMediaIcons(!showMediaIcons)
     }
@@ -27,9 +28,9 @@ const Navbar = () => {
                     <div className={activeClass === "Products" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Products") }}> <Link to="Products">Products</Link></div>
                     <div className={activeClass === "About" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("About") }}> <Link to="/About">About</Link></div>
                     <div className={activeClass === "Contact" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Contact") }}>  <Link to="/Contact">Contact</Link></div>
-                    <button className='login'><MdLogin className='icons' />Login</button>
+                    <Link to="/login" className='login'><MdLogin className='icons' />Login</Link>
                     <button className='register'><FaUserPlus className='icons' />Register</button>
-                    <button className='cart'><FaShoppingCart className='icons' />Cart({state.length})</button>
+                    <Link to="/cart" className='cart-btn'><FaShoppingCart className='icons' />Cart({state.length})</Link>
                 </div>
                 {isMobile ? (
                     <div className="menu-icons" onClick={handleClick}>

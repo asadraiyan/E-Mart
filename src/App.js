@@ -7,6 +7,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import ProductCard from './Components/ProductCard';
 import Cart from './Components/Cart';
+import Login from './Components/Login';
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/Products" element={<Products />} />
           <Route path="/Product/:id" element={<ProductCard />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<Login />} />
           <Route exact path="/About" element={<About />} />
           <Route exact path="/Contact" element={<Contact />} />
         </Routes>
