@@ -6,8 +6,9 @@ import { MdLogin } from "react-icons/md";
 import { FaUserPlus } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
-
+import { useSelector } from "react-redux"
 const Navbar = () => {
+    const state = useSelector((state) => state.HandleCart)
     const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
     const [showMediaIcons, setshowMediaIcons] = useState(true)
     const [activeClass, setActiveClass] = useState("Home")
@@ -28,7 +29,7 @@ const Navbar = () => {
                     <div className={activeClass === "Contact" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Contact") }}>  <Link to="/Contact">Contact</Link></div>
                     <button className='login'><MdLogin className='icons' />Login</button>
                     <button className='register'><FaUserPlus className='icons' />Register</button>
-                    <button className='cart'><FaShoppingCart className='icons' />Cart(0)</button>
+                    <button className='cart'><FaShoppingCart className='icons' />Cart({state.length})</button>
                 </div>
                 {isMobile ? (
                     <div className="menu-icons" onClick={handleClick}>
