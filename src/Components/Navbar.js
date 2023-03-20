@@ -29,7 +29,7 @@ const Navbar = () => {
                     <div className={activeClass === "About" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("About") }}> <Link to="/About">About</Link></div>
                     <div className={activeClass === "Contact" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Contact") }}>  <Link to="/Contact">Contact</Link></div>
                     <Link to="/login" className='login'><MdLogin className='icons' />Login</Link>
-                    <button className='register'><FaUserPlus className='icons' />Register</button>
+                    <Link to="/signup" className='register'><FaUserPlus className='icons' />Register</Link>
                     <Link to="/cart" className='cart-btn'><FaShoppingCart className='icons' />Cart({state.length})</Link>
                 </div>
                 {isMobile ? (

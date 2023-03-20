@@ -630,7 +630,20 @@
 }
 
 .submit:hover {
-  background-color: rgb(176, 105, 243);
+  background-color: rgb(68, 64, 64);
   border: none;
   color: white;
+}
+
+.signup-box {
+  border: 1px solid grey;
+  width: 400px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 77px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+
 }

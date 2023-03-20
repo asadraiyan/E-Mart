@@ -8,6 +8,7 @@ import Contact from './Components/Contact';
 import ProductCard from './Components/ProductCard';
 import Cart from './Components/Cart';
 import Login from './Components/Login';
+import Signup from './Components/Signup';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Product/:id" element={<ProductCard />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           <Route exact path="/About" element={<About />} />
           <Route exact path="/Contact" element={<Contact />} />
         </Routes>
