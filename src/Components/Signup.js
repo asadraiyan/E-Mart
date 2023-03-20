@@ -6,7 +6,7 @@ const Signup = () => {
     return (
         <div className='signup-box'>
             <div className="login-heading">
-                <h2>Sign up</h2>
+                <h1>Sign up</h1>
             </div>
             <hr />
             <div className="social-icons">

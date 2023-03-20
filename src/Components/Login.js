@@ -6,7 +6,7 @@ const Login = () => {
     return (
         <div className='login-box'>
             <div className="login-heading">
-                <h2>Login</h2>
+                <h1>Login</h1>
             </div>
             <hr />
             <div className="social-icons">

@@ -531,7 +531,7 @@
 
 .login-heading {
   /* border: 2px solid red; */
-  height: 50px;
+  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -646,4 +646,61 @@
   font-family: 'Poppins', sans-serif;
   padding: 10px;
 
+}
+
+.about-container {
+  /* border: 2px solid red; */
+  width: 70%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.heading-container {
+  /* border: 2px solid black; */
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutimg-conatiner {
+  /* border: 2px solid green; */
+  width: 510px;
+  height: 460px;
+}
+
+.about-img {
+  /* border: 2px solid violet; */
+  width: 500px;
+  height: 450px;
+  padding: 5px;
+}
+
+
+.contact-btn {
+  font-size: 16px;
+  text-decoration: none;
+  width: 100px;
+  padding: 5px 8px 5px 8px;
+  background-color: #0d6efd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  border: none;
+}
+
+.about-heading {
+  font-size: 40px;
+  color: rgb(244, 115, 67)
+}
+
+.about-content {
+  font-size: 20px;
+  margin-top: 20px;
 }
