@@ -13,6 +13,8 @@ const Navbar = () => {
     const [showMediaIcons, setshowMediaIcons] = useState(true)
     const [activeClass, setActiveClass] = useState("Home")
 
+    // console.log("state =", state)
+
 
     const handleClick = () => {
         setshowMediaIcons(!showMediaIcons)
@@ -28,9 +30,9 @@ const Navbar = () => {
                     <div className={activeClass === "Products" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Products") }}> <Link to="Products">Products</Link></div>
                     <div className={activeClass === "About" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("About") }}> <Link to="/About">About</Link></div>
                     <div className={activeClass === "Contact" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Contact") }}>  <Link to="/Contact">Contact</Link></div>
-                    <Link to="/login" className='login'><MdLogin className='icons' />Login</Link>
-                    <Link to="/signup" className='register'><FaUserPlus className='icons' />Register</Link>
-                    <Link to="/cart" className='cart-btn'><FaShoppingCart className='icons' />Cart({state.length})</Link>
+                    <Link to="/login" className={activeClass === "Login" ? "auth-links active-auth" : "auth-links"} onClick={() => { handleClick(); setActiveClass("Login") }} ><MdLogin className='icons' />Login</Link>
+                    <Link to="/signup" className={activeClass === "Register" ? "auth-links active-auth" : "auth-links"} onClick={() => { handleClick(); setActiveClass("Register") }}><FaUserPlus className='icons' />Register</Link>
+                    <Link to="/cart" className={activeClass === "Cart" ? "auth-links active-auth" : "auth-links"} onClick={() => { handleClick(); setActiveClass("Cart") }}><FaShoppingCart className='icons' />Cart({state.length})</Link>
                 </div>
                 {isMobile ? (
                     <div className="menu-icons" onClick={handleClick}>

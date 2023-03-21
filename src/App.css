@@ -38,10 +38,11 @@
   gap: 2rem;
   align-items: center;
   color: black;
+  margin-right: 10px;
 }
 
-.navlink a,
-.sideNav a {
+.navlink div a,
+.sideNav div a {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
@@ -65,8 +66,16 @@
   z-index: -3;
 }
 
-.active a {
-  color: black
+.navlink .active a,
+.sideNav .active a {
+  color: black;
+}
+
+.navlink .auth-active a,
+.sideNav .auth-active a {
+  color: white;
+  background-color: black;
+
 }
 
 .hidden {
@@ -83,39 +92,36 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 350px;
+  /* width: 350px; */
   gap: 10px;
   font-family: 'Poppins', sans-serif;
 }
 
-.login,
-.register,
-.cart-btn {
-  font-size: 16px;
-  padding: 7px 14px 7px 5px;
+.auth-links {
+  font-size: 17px;
+  padding: 3px 0 7px 5px;
   background-color: white;
-  border-radius: 4px;
   cursor: pointer;
   min-width: 110px;
+  text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.login:hover {
-  background-color: rgb(48, 45, 45);
-  color: white;
-}
-
-.register:hover {
-  background-color: rgb(48, 45, 45);
-  color: white;
-}
-
-.cart-btn:hover {
+.auth-links:hover {
   background-color: rgb(48, 45, 45);
   color: white;
 }
 
 .icons {
-  margin-left: 10px;
+  margin: 5px 5px -2px 10px
+}
+
+.active-auth {
+  color: white;
+  background-color: black;
 }
 
 .homepage-container {
@@ -303,8 +309,8 @@
 .img-box,
 .box-img {
   /* border: 2px solid blue; */
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 325px;
   margin-left: 40px;
 }
 
@@ -465,28 +471,37 @@
   margin-top: 50px;
   background-color: #fcf7f7bd;
   box-shadow: 1px 2px 1px 2px rgb(211, 207, 207);
+  font-family: 'Poppins', sans-serif;
 }
 
 .product-box {
-  border: 2px solid blue;
-  width: 310px;
-  height: 310px;
+  /* border: 2px solid blue; */
+  width: 210px;
+  /* height: 235px; */
   margin-right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .product-img {
-  border: 2px solid yellow;
-  width: 300px;
-  height: 300px;
+  /* border: 2px solid yellow; */
+  width: 200px;
+  height: 225px;
 
 }
 
 .product-details {
-  border: 2px solid blueviolet;
-  width: 400px;
+  /* border: 2px solid blueviolet; */
+  width: 380px;
   margin-left: 100px;
   padding: 5px;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
 }
 
 .update-btn {
@@ -514,6 +529,19 @@
 .inc-dec:hover {
   background-color: rgb(48, 45, 45);
   color: white;
+}
+
+.close-icon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-left: 100px;
+}
+
+.empty-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-box {
@@ -703,4 +731,34 @@
 .about-content {
   font-size: 20px;
   margin-top: 20px;
+}
+
+.proceed-container {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+
+.proceed {
+  height: 30px;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 2px solid black;
+  margin-top: 30px;
+  width: 225px;
+  height: 40px;
+
+
+}
+
+.proceed:hover {
+  background-color: rgb(68, 64, 64);
+  border: none;
+  color: white;
 }
