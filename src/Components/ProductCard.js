@@ -4,17 +4,15 @@ import { useParams } from 'react-router-dom'
 import Loader from './Loader';
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import { addCart } from './redux/action/Index';
+import { addCart, delCart } from './redux/action/Index';
 
 const ProductCard = () => {
     const { id } = useParams()
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(false)
+    const [cartBtn, setCartBtn] = useState("Add to cart")
 
-    const dispatch = useDispatch()
-    const addProduct = (product) => {
-        dispatch(addCart(product))
-    }
+
     useEffect(() => {
         const getProduct = async () => {
             setLoading(true)
@@ -24,6 +22,19 @@ const ProductCard = () => {
         }
         getProduct()
     }, [])
+
+    const dispatch = useDispatch()
+
+    const handleCart = (product) => {
+        if (cartBtn === "Add to cart") {
+            dispatch(addCart(product))
+            setCartBtn("Remove from cart")
+        }
+        else {
+            dispatch(delCart(product))
+            setCartBtn("Add to cart")
+        }
+    }
 
     const ShowProduct = () => {
         return (
@@ -38,7 +49,7 @@ const ProductCard = () => {
                         <p className='product-rating'>Rating {product.rating && product.rating.rate}<BiStar /></p>
                         <h3 className='product-price'>$ {product.price}</h3>
                         <p className='product-desc'>{product.description}</p>
-                        <button className='button-btn' onClick={() => addProduct(product)}>Add to cart</button>
+                        <button className='button-btn' onClick={() => handleCart(product)}>{cartBtn}</button>
                         <Link to="/cart" className='button-btn'>Go to cart</Link>
 
                     </div>
