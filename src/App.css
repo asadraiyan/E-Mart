@@ -290,7 +290,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-top: 30px;
+}
+
+.go-back {
+  font-size: 30px;
   margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 .img-box,

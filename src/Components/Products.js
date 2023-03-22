@@ -38,8 +38,8 @@ const Products = () => {
 			<>
 				<div className="btn-container">
 					<button className={`btn-icons ${activeBtn === "Gallery" && "active-btn"}`} onClick={() => { setFilteredData(data); setActiveBtn("Gallery") }}>Gallery</button>
-					<button className={`btn-icons ${activeBtn === "men's clothing" && "active-btn"}`} onClick={() => { filterProduct("men's clothing"); setActiveBtn("men's clothing") }}>Men's Clothing</button>
 					<button className={`btn-icons ${activeBtn === "women's clothing" && "active-btn"}`} onClick={() => { filterProduct("women's clothing"); setActiveBtn("women's clothing") }}>Women's Clothing</button>
+					<button className={`btn-icons ${activeBtn === "men's clothing" && "active-btn"}`} onClick={() => { filterProduct("men's clothing"); setActiveBtn("men's clothing") }}>Men's Clothing</button>
 					<button className={`btn-icons ${activeBtn === "jewelery" && "active-btn"}`} onClick={() => { filterProduct("jewelery"); setActiveBtn("jewelery") }}>Jewellery</button>
 					<button className={`btn-icons ${activeBtn === "electronics" && "active-btn"}`} onClick={() => { filterProduct("electronics"); setActiveBtn("electronics") }}>Electronics</button>
 				</div>
