@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 
+/* Navbar css starts from here */
+
 .logo {
   font-size: 2rem;
   font-weight: bold;
@@ -24,9 +26,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  /* background-color: rgb(186, 229, 244); */
   background-color: #e5eaf5;
-  /* box-shadow: 1px 1px 1px 1px rgb(184, 180, 180); */
   z-index: 1;
 
 
@@ -57,7 +57,7 @@
   position: absolute;
   top: 70px;
   left: 0;
-  background-color: #e6e4e4;
+  background-color: rgb(216, 237, 245);
   align-items: center;
   width: 200px;
   height: calc(100vh - 70px);
@@ -93,17 +93,16 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* width: 350px; */
-  gap: 10px;
   font-family: 'Poppins', sans-serif;
 }
 
 .auth-links {
   font-size: 17px;
-  padding: 3px 0 7px 5px;
+  padding: 3px 0px 0px 0px;
   background-color: white;
   cursor: pointer;
-  min-width: 110px;
+  min-width: 102px;
+  height: 40px;
   text-decoration: none;
   color: black;
   margin-right: 10px;
@@ -126,6 +125,140 @@
   background-color: rgb(68, 64, 64);
 }
 
+/* Login & Signup components css starts from here */
+
+.login-box {
+  border: 1px solid grey;
+  width: 400px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 115px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+
+}
+
+.login-heading {
+  /* border: 2px solid red; */
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75px;
+  margin-top: 20px;
+}
+
+.google {
+  /* width: 350px; */
+  height: 30px;
+  font-size: 15px;
+  background-color: #0d6efd;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.facebook {
+  height: 30px;
+  font-size: 15px;
+  background-color: #0d6efd;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.email-address {
+  font: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.email {
+  height: 30px;
+  font-size: 16px;
+  margin-top: 5px;
+  border-radius: 3px;
+  outline: none;
+  padding: 3px;
+  border: 1px solid black;
+
+
+}
+
+.not-share {
+  font-size: 13px;
+}
+
+.password {
+  font: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.pass {
+  height: 30px;
+  font-size: 16px;
+  margin-top: 5px;
+  border-radius: 3px;
+  outline: none;
+  padding: 3px;
+  border: 1px solid black;
+}
+
+.check {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.submit {
+  height: 30px;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #0d6efd;
+  margin-top: 30px;
+}
+
+.submit:hover {
+  background-color: rgb(68, 64, 64);
+  border: none;
+  color: white;
+}
+
+.signup-box {
+  border: 1px solid grey;
+  width: 400px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 77px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+
+}
+
+
+/* Home page component css starts from here */
 
 .intro-img {
   height: 60vh;
@@ -155,10 +288,11 @@
   letter-spacing: 2px;
 }
 
+/* Product component css starts from here */
+
 .product-container {
   /* border: 2px solid red; */
   width: 100%;
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,7 +302,6 @@
 .latest {
   /* border: 2px solid green; */
   width: 90%;
-  /* height: 250px; */
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -178,18 +311,16 @@
   margin-top: 50px;
 }
 
+
 .btn-container {
-  /* border: 2px solid yellow; */
   display: flex;
   flex-direction: row;
-  margin: auto;
   margin-top: 50px;
-  width: 650px;
-  height: 50px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
-
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .btn-icons {
@@ -198,7 +329,6 @@
   background-color: white;
   border-radius: 4px;
   cursor: pointer;
-  /* box-shadow: 0px 0.5px 0px 0.5px rgb(0, 0, 0.5); */
   font-family: 'Poppins', sans-serif;
 }
 
@@ -221,6 +351,8 @@
   margin-bottom: 20px;
   margin-top: 50px;
 }
+
+/* Card content css starts from here */
 
 .card-container {
   border: 1px solid grey;
@@ -285,6 +417,9 @@
   color: white;
 }
 
+
+/* Product card component css starts from here */
+
 .box-container {
   /* border: 2px solid red; */
   display: flex;
@@ -294,6 +429,8 @@
 }
 
 .go-back {
+  /* border: 2px solid red; */
+  width: 45%;
   font-size: 30px;
   margin-top: 20px;
   margin-left: 20px;
@@ -362,7 +499,7 @@
   color: white;
 }
 
-/* loader css start from here  */
+/* Loader component css start from here  */
 
 .loader-container {
   display: flex;
@@ -453,7 +590,8 @@
   }
 }
 
-/* loader css end here  */
+
+/* Cart component css starts from here */
 
 .main-container {
   /* border: 2px solid red; */
@@ -471,7 +609,6 @@
 .product-box {
   /* border: 2px solid blue; */
   width: 210px;
-  /* height: 235px; */
   margin-right: 100px;
   display: flex;
   justify-content: center;
@@ -545,137 +682,36 @@
   justify-content: center;
 }
 
-.login-box {
-  border: 1px solid grey;
-  width: 400px;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 115px;
-  font-family: 'Poppins', sans-serif;
-  padding: 10px;
-
-}
-
-.login-heading {
+.proceed-container {
   /* border: 2px solid red; */
-  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.checkbox {
-  display: flex;
-  flex-direction: row;
-  margin-top: 5px;
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* align-items: center; */
-  height: 75px;
-  margin-top: 20px;
-}
-
-.google {
-  /* width: 350px; */
-  height: 30px;
-  font-size: 15px;
-  background-color: #0d6efd;
-  border-radius: 3px;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.facebook {
-  /* width: 350px; */
-  height: 30px;
-  font-size: 15px;
-  background-color: #0d6efd;
-  border-radius: 3px;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.email-address {
-  font: 20px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.email {
-  height: 30px;
-  font-size: 16px;
-  margin-top: 5px;
-  border-radius: 3px;
-  outline: none;
-  padding: 3px;
-  border: 1px solid black;
-
-
-}
-
-.not-share {
-  font-size: 13px;
-}
-
-.password {
-  font: 20px;
-  font-weight: bold;
   margin-top: 10px;
+  margin-bottom: 20px;
 
 }
 
-.pass {
+.proceed {
   height: 30px;
-  font-size: 16px;
-  margin-top: 5px;
-  border-radius: 3px;
-  outline: none;
-  padding: 3px;
-  border: 1px solid black;
-}
-
-.check {
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 5px;
-}
-
-.submit {
-  height: 30px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
-  border: 1px solid #0d6efd;
+  border: 2px solid black;
   margin-top: 30px;
+  width: 225px;
+  height: 40px;
 }
 
-.submit:hover {
+.proceed:hover {
   background-color: rgb(68, 64, 64);
   border: none;
   color: white;
 }
 
-.signup-box {
-  border: 1px solid grey;
-  width: 400px;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 77px;
-  font-family: 'Poppins', sans-serif;
-  padding: 10px;
 
-}
+/* About page component css starts from here */
 
 .about-container {
   /* border: 2px solid red; */
@@ -710,7 +746,6 @@
   padding: 5px;
 }
 
-
 .contact-btn {
   font-size: 18px;
   text-decoration: none;
@@ -735,33 +770,8 @@
   margin-top: 20px;
 }
 
-.proceed-container {
-  /* border: 2px solid red; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
 
-}
-
-.proceed {
-  height: 30px;
-  font-size: 18px;
-  background-color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 2px solid black;
-  margin-top: 30px;
-  width: 225px;
-  height: 40px;
-}
-
-.proceed:hover {
-  background-color: rgb(68, 64, 64);
-  border: none;
-  color: white;
-}
+/* Contact page component css starts from here */
 
 .big-container {
   display: flex;
@@ -777,7 +787,6 @@
   height: 100px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 
 
 }
@@ -830,7 +839,6 @@
   outline: none;
   border-radius: 2px;
   border: 1px solid black;
-  /* box-shadow: 1px 1px 2px 2px rgb(50, 48, 48); */
   margin-top: 5px;
 }
 
@@ -847,7 +855,6 @@
   outline: none;
   border-radius: 2px;
   font-size: 18px;
-  /* box-shadow: 1px 1px 2px 2px rgb(50, 48, 48); */
   margin-top: 5px;
 }
 
@@ -864,4 +871,159 @@
   color: white;
   border: none;
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .content {
+    left: 1%
+  }
+
+  .heading {
+    font-size: 2.3rem;
+  }
+
+  .paragraph {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+  }
+
+  .intro-img {
+    height: 55vh;
+  }
+
+  .latest {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .btn-container {
+    margin-top: 45px;
+    gap: 1rem;
+  }
+
+  .btn-icons {
+    font-size: 14px;
+    padding: 4px 7px 4px 7px
+  }
+
+  .card-img {
+    width: 200px;
+    height: 235px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  buy-now {
+    font-size: 15px;
+    padding: 3px 6px 3px 6px;
+    margin-top: 15px;
+  }
+
+  .card-body {
+    width: 180px;
+    height: 115px;
+    margin-bottom: 10px;
+  }
+
+  .card-container {
+    width: 275px;
+    height: 425px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .latest {
+    width: 75%;
+    font-size: 15px;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  .heading {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .intro-img {
+    height: 40vh;
+  }
+
+  .content {
+    top: 27%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+
+  .latest {
+    width: 65%;
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .paragraph {
+    font-size: 12px;
+  }
+
+  .intro-img {
+    height: 30vh;
+  }
+
+  .content {
+    top: 22%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-container {
+
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+  }
 }
