@@ -499,11 +499,18 @@
 }
 
 .update-btn {
+  /* border: 2px solid red; */
   display: flex;
   flex-direction: row;
-  width: 80px;
+  width: 100px;
   justify-content: space-between;
+  align-items: center;
   margin-top: 15px;
+}
+
+.item-qty {
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .inc-dec {

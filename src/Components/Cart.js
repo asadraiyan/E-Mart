@@ -1,16 +1,24 @@
-import React, { useState } from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import { delCart } from "../Components/redux/action/Index"
+import { addCart, delCart, removeProduct } from "../Components/redux/action/Index"
 import { GrClose } from "react-icons/gr";
 
 
 const Cart = () => {
     const state = useSelector((state) => state.HandleCart)
     const dispatch = useDispatch()
-    const [count, setCount] = useState(0)
-
+    console.log("state =", state)
     const handleClose = (item) => {
-        dispatch(delCart(item))
+
+        const productList = state.filter(stateItem => stateItem.id !== item.id)
+        console.log("productList =", productList)
+        dispatch(removeProduct(productList))
+    }
+
+    const addItem = (product) => {
+        dispatch(addCart(product))
+    }
+    const deleteItem = (product) => {
+        dispatch(delCart(product))
     }
 
     const cartItems = (cartItem) => {
@@ -22,10 +30,11 @@ const Cart = () => {
                     </div>
                     <div className="product-details">
                         <h2 className='proname'>{cartItem.title}</h2>
-                        <h3 className='total-price'>$ {cartItem.price}</h3>
+                        <h3 className='total-price'>{cartItem.qty} x $ {cartItem.price} = $ {(cartItem.qty * cartItem.price).toFixed(2)}</h3>
                         <div className="update-btn">
-                            <button className='inc-dec'>+</button>
-                            <button className='inc-dec'>-</button>
+                            <button className='inc-dec' onClick={() => addItem(cartItem)}>+</button>
+                            <span className='item-qty'>{cartItem.qty}</span>
+                            <button className='inc-dec' onClick={() => deleteItem(cartItem)}>-</button>
                         </div>
                     </div>
                     <GrClose className='close-icon' onClick={() => handleClose(cartItem)} />

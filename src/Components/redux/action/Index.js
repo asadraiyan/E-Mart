@@ -13,3 +13,10 @@ export const delCart = (product) => {
         payload: product
     }
 }
+
+export const removeProduct = (product) => {
+    return {
+        type: "REMOVEITEM",
+        payload: product
+    }
+}
