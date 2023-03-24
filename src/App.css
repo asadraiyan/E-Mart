@@ -908,7 +908,7 @@
   }
 
   .latest {
-    width: 80%;
+    width: 85%;
     font-size: 18px;
   }
 
@@ -961,7 +961,7 @@
   }
 
   .latest {
-    width: 75%;
+    width: 83%;
     font-size: 15px;
   }
 
@@ -986,13 +986,25 @@
   .content {
     top: 27%;
   }
+
+  .navlink div a,
+  .sideNav div a {
+    font-size: 18px;
+  }
+
+  .auth-links {
+    font-size: 15px;
+    padding: 4px 0px 0px 0px;
+    min-width: 96px;
+    height: 38px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
 
 
   .latest {
-    width: 65%;
+    width: 80%;
     font-size: 13px;
   }
 
@@ -1008,14 +1020,45 @@
 
   .paragraph {
     font-size: 12px;
+    letter-spacing: 0px;
   }
 
   .intro-img {
-    height: 30vh;
+    height: 25vh;
   }
 
   .content {
-    top: 22%;
+    top: 20%;
+  }
+
+  .card-img {
+    width: 185px;
+    height: 210px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .buy-now {
+    font-size: 14px;
+    padding: 3px 7px 3px 7px;
+    margin-top: 15px;
+  }
+
+  .card-body {
+    width: 170px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .card-container {
+    width: 260px;
+    height: 400px;
   }
 }
 
