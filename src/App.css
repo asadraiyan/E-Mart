@@ -1063,6 +1063,194 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .box-container {
+
+    justify-content: space-between;
+    padding: 10px;
+
+  }
+
+  .desc-container {
+    margin-right: 0px;
+    width: 500px;
+
+  }
+
+  .head {
+    font-size: 23px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .product-price {
+    font-size: 30px;
+  }
+
+  .product-desc {
+    font-size: 18px;
+  }
+
+  .img-box,
+  .box-img {
+    width: 275px;
+    height: 300px;
+    margin-left: 0px;
+  }
+
+  .button-btn {
+    font-size: 15px;
+  }
+
+  .go-back {
+    width: 27%;
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .desc-container {
+    width: 350px;
+
+  }
+
+  .head {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .product-price {
+    font-size: 25px;
+  }
+
+  .product-desc {
+    font-size: 16px;
+  }
+
+  .img-box,
+  .box-img {
+    width: 225px;
+    height: 250px;
+  }
+
+  .button-btn {
+    font-size: 14px;
+  }
+
+  .go-back {
+    width: 25%;
+    margin-bottom: 10px;
+
+  }
+
+  .product-rating {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .box-container {
+
+    margin-top: -5px;
+
+  }
+
+  .desc-container {
+    width: 300px;
+
+  }
+
+  .head {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .product-price {
+    font-size: 20px;
+  }
+
+  .product-desc {
+    font-size: 14px;
+  }
+
+  .img-box,
+  .box-img {
+    width: 150px;
+    height: 175px;
+  }
+
+  .button-btn {
+    font-size: 13px;
+    padding: 4px 5px 4px 5px
+  }
+
+  .go-back {
+    width: 23%;
+    font-size: 20px;
+
+  }
+
+  .product-rating {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+
+  .desc-container {
+    width: 255px;
+
+  }
+
+  .head {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .product-price {
+    font-size: 18px;
+  }
+
+  .product-desc {
+    font-size: 12px;
+  }
+
+  .img-box,
+  .box-img {
+    width: 100px;
+    height: 125px;
+  }
+
+  .button-btn {
+    font-size: 12px;
+    padding: 3px 4px 3px 4px;
+  }
+
+  .go-back {
+    width: 20%;
+    font-size: 20px;
+
+  }
+
+  .product-rating {
+    font-size: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
   .about-container {
 
     width: 100%;
