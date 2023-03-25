@@ -290,19 +290,50 @@
   color: white;
 }
 
+.signup-container {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .signup-box {
-  border: 1px solid grey;
+  border: 2px solid grey;
   width: 400px;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  margin-top: 77px;
+  justify-content: center;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
-  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgb(175, 173, 173)
+}
+
+.user-container {
+  /* border: 2px solid yellow; */
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-img {
+  /* border: 2px solid blue; */
+  width: 510px;
+  height: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
+.img-signup {
+  /* border: 2px solid yellow; */
+  width: 500px;
+  height: 325px;
+}
 
 /* Home page component css starts from here */
 
@@ -1979,5 +2010,95 @@
 
   .password {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .signup-box {
+    height: 90vh;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .signup-container {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .signup-box {
+    margin-bottom: 20px;
+  }
+
+  .signup-img {
+    /* border: 2px solid blue; */
+    width: 460px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .img-signup {
+    width: 450px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .user-container {
+    width: 300px;
+  }
+
+  .signup-box {
+    width: 350px;
+    height: 75vh;
+  }
+
+  .signup-img {
+    /* border: 2px solid blue; */
+    width: 410px;
+    height: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .img-signup {
+    width: 400px;
+    height: 275px;
+  }
+
+  .sign {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .user-container {
+    width: 275px;
+  }
+
+  .signup-box {
+    width: 325px;
+  }
+
+  .signup-img {
+    width: 335px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .img-signup {
+    width: 325px;
+    height: 260px;
+  }
+
+  .sign {
+    font-size: 27px;
   }
 }
