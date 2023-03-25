@@ -127,25 +127,52 @@
 
 /* Login & Signup components css starts from here */
 
-.login-box {
-  border: 1px solid grey;
-  width: 400px;
-  height: 60vh;
+.login-container {
+  /* border: 2px solid red; */
   display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 115px;
-  font-family: 'Poppins', sans-serif;
-  padding: 10px;
-
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* gap: 100px; */
+  height: 80vh;
 }
 
-.login-heading {
-  /* border: 2px solid red; */
-  height: 55px;
+.login-img {
+  /* border: 2px solid blue; */
+  width: 510px;
+  height: 335px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+.img-login {
+  /* border: 2px solid yellow; */
+  width: 500px;
+  height: 325px;
+}
+
+.login-box {
+  border: 2px solid grey;
+  width: 400px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgb(175, 173, 173)
+}
+
+.login-heading {
+  border-bottom: 1px solid black;
+  width: 375px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .checkbox {
@@ -155,10 +182,12 @@
 }
 
 .social-icons {
+  /* border: 2px solid red; */
+  width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 75px;
+  height: 80px;
   margin-top: 20px;
 }
 
@@ -183,6 +212,20 @@
   cursor: pointer;
 }
 
+.email-container {
+  /* border: 2px solid yellow; */
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.password-container {
+  /* border: 2px solid blue; */
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
 .email-address {
   font: 20px;
   font-weight: bold;
@@ -191,6 +234,7 @@
 
 .email {
   height: 30px;
+  width: 350px;
   font-size: 16px;
   margin-top: 5px;
   border-radius: 3px;
@@ -214,6 +258,7 @@
 
 .pass {
   height: 30px;
+  width: 350px;
   font-size: 16px;
   margin-top: 5px;
   border-radius: 3px;
@@ -230,6 +275,7 @@
 
 .submit {
   height: 30px;
+  width: 350px;
   font-size: 16px;
   background-color: white;
   border-radius: 3px;
@@ -1764,5 +1810,174 @@
     font-size: 13px;
     width: 70px;
     padding: 5px 4px 5px 8px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .login-box {
+    /* width: 350px; */
+    height: 75vh;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .login-box {
+    margin-bottom: 20px;
+  }
+
+  .login-img {
+    /* border: 2px solid blue; */
+    width: 460px;
+    height: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .img-login {
+    /* border: 2px solid yellow; */
+    width: 450px;
+    height: 275px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .login-box {
+    /* width: 350px; */
+    height: 70vh;
+  }
+
+  .login-img {
+    /* border: 2px solid blue; */
+    width: 435px;
+    height: 275px;
+
+  }
+
+  .img-login {
+    /* border: 2px solid yellow; */
+    width: 425px;
+    height: 265px;
+  }
+
+  .login-heading {
+    width: 325px;
+    height: 55px;
+  }
+
+  .log {
+    font-size: 30px;
+  }
+
+  .social-icons {
+
+    width: 300px;
+  }
+
+  .email-container {
+    width: 300px;
+  }
+
+  .email {
+    width: 300px;
+  }
+
+  .password-container {
+    width: 300px;
+  }
+
+  .pass {
+    width: 300px;
+  }
+
+  .submit {
+    width: 300px;
+  }
+
+  .login-box {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+
+  .login-img {
+    /* border: 2px solid blue; */
+    width: 350px;
+    height: 240px;
+
+  }
+
+  .login-heading {
+    margin-bottom: 25px;
+  }
+
+  .img-login {
+    /* border: 2px solid yellow; */
+    width: 350px;
+    height: 230px;
+  }
+
+  .login-heading {
+    width: 300px;
+    height: 50px;
+  }
+
+  .log {
+    font-size: 25px;
+  }
+
+  .social-icons {
+
+    width: 275px;
+  }
+
+  .email-container {
+    width: 275px;
+  }
+
+  .email {
+    width: 275px;
+    font-size: 14px;
+  }
+
+  .password-container {
+    width: 275px;
+  }
+
+  .pass {
+    width: 275px;
+    font-size: 14px;
+  }
+
+  .not-share {
+    font-size: 12px;
+  }
+
+  .check {
+    font-size: 14px;
+  }
+
+  .submit {
+    width: 278px;
+    font-size: 16px;
+  }
+
+  .login-box {
+    width: 330px;
+  }
+
+  .email-address {
+    font-size: 16px;
+  }
+
+  .password {
+    font-size: 16px;
   }
 }
