@@ -6,7 +6,7 @@ import { GrClose } from "react-icons/gr";
 const Cart = () => {
     const state = useSelector((state) => state.HandleCart)
     const dispatch = useDispatch()
-    console.log("state =", state)
+    // console.log("state =", state)
     const handleClose = (item) => {
 
         const productList = state.filter(stateItem => stateItem.id !== item.id)
@@ -32,9 +32,9 @@ const Cart = () => {
                         <h2 className='proname'>{cartItem.title}</h2>
                         <h3 className='total-price'>{cartItem.qty} x $ {cartItem.price} = $ {(cartItem.qty * cartItem.price).toFixed(2)}</h3>
                         <div className="update-btn">
-                            <button className='inc-dec' onClick={() => addItem(cartItem)}>+</button>
+                            <button className='inc' onClick={() => addItem(cartItem)}>+</button>
                             <span className='item-qty'>{cartItem.qty}</span>
-                            <button className='inc-dec' onClick={() => deleteItem(cartItem)}>-</button>
+                            <button className='dec' onClick={() => deleteItem(cartItem)}>-</button>
                         </div>
                     </div>
                     <GrClose className='close-icon' onClick={() => handleClose(cartItem)} />

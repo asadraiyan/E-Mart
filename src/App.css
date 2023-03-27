@@ -302,7 +302,7 @@
 .signup-box {
   border: 2px solid grey;
   width: 400px;
-  height: 75vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -565,10 +565,10 @@
   background-color: white;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   font-family: 'Poppins', sans-serif;
   color: black;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .button-btn:hover {
@@ -719,7 +719,9 @@
   width: 100px;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  /* margin-top: 15px; */
+  border: 1.5px solid black;
+  border-radius: 5px;
 }
 
 .item-qty {
@@ -727,7 +729,8 @@
   font-weight: bold;
 }
 
-.inc-dec {
+.inc,
+.dec {
   font-size: 25px;
   width: 33px;
   height: 30px;
@@ -736,14 +739,33 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  border-radius: 3px;
-  border: 1px solid black;
+  border-radius: 5px 0px 0px 5px;
   cursor: pointer;
+  border: none;
+  border-right: 1px solid black;
 }
 
-.inc-dec:hover {
+.dec {
+  border: none;
+  border-left: 1px solid black;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.inc:hover,
+.dec:hover {
   background-color: rgb(48, 45, 45);
   color: white;
+}
+
+.qty-box {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.total-price {
+  margin-bottom: 10px;
 }
 
 .close-icon {
@@ -1354,14 +1376,15 @@
     font-size: 16px;
   }
 
-  .inc-dec {
-    font-size: 20px;
-    width: 25px;
-    height: 25px;
+  .inc,
+  .dec {
+    font-size: 23px;
+    width: 30px;
+    height: 30px;
   }
 
   .update-btn {
-    width: 80px;
+    width: 85px;
   }
 
   .close-icon {
@@ -1408,10 +1431,19 @@
     font-size: 14px;
   }
 
-  .inc-dec {
-    font-size: 18px;
-    width: 23px;
-    height: 23px;
+  .inc,
+  .dec {
+    font-size: 21px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .inc {
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .dec {
+    border-radius: 0px 2px 2px 0px;
   }
 
   .item-qty {
@@ -1461,10 +1493,11 @@
     font-size: 12px;
   }
 
-  .inc-dec {
-    font-size: 16px;
-    width: 20px;
-    height: 20px;
+  .inc,
+  .dec {
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
   }
 
   .update-btn {
@@ -1513,18 +1546,19 @@
     font-size: 11px;
   }
 
-  .inc-dec {
-    font-size: 15px;
-    width: 20px;
-    height: 20px;
+  .inc,
+  .dec {
+    font-size: 18px;
+    width: 23px;
+    height: 23px;
   }
 
   .update-btn {
-    width: 60px;
+    width: 70px;
   }
 
   .close-icon {
-    font-size: 27px;
+    font-size: 28px;
 
   }
 

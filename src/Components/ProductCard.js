@@ -11,7 +11,7 @@ const ProductCard = () => {
     const { id } = useParams()
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(false)
-    const [cartBtn, setCartBtn] = useState("Add to cart")
+    // const [cartBtn, setCartBtn] = useState("Add to cart")
     const state = useSelector((state) => state.HandleCart)
 
 
@@ -28,14 +28,15 @@ const ProductCard = () => {
     const dispatch = useDispatch()
 
     const handleCart = (product) => {
-        if (cartBtn === "Add to cart") {
-            dispatch(addCart(product))
-            setCartBtn("Remove from cart")
-        }
-        else {
-            dispatch(delCart(product))
-            setCartBtn("Add to cart")
-        }
+        dispatch(addCart(product))
+    }
+
+    const addItem = (product) => {
+        dispatch(addCart(product))
+    }
+
+    const deleteItem = (product) => {
+        dispatch(delCart(product))
     }
 
     const productQty = state.find(stateProduct => stateProduct.id === product.id)?.qty
@@ -54,8 +55,18 @@ const ProductCard = () => {
                         <p className='product-rating'>Rating {product.rating && product.rating.rate}<BiStar /></p>
                         <h3 className='product-price'>$ {product.price}</h3>
                         <p className='product-desc'>{product.description}</p>
-                        <button className='button-btn' onClick={() => handleCart(product)}>{`${cartBtn} ${productQty ? (`| ${productQty}`) : ""}`}</button>
-                        <Link to="/cart" className='button-btn'>Go to cart</Link>
+                        <div className='qty-box'>
+                            {productQty > 0 ? (
+                                <div className="update-btn">
+                                    <button className='inc' onClick={() => addItem(product)}>+</button>
+                                    <span className='item-qty'>{productQty}</span>
+                                    <button className='dec' onClick={() => deleteItem(product)}>-</button>
+                                </div>
+                            ) : (
+                                <button className='button-btn' onClick={() => handleCart(product)}>Add to cart</button>
+                            )}
+                            <Link to="/cart" className='button-btn'>Go to cart</Link>
+                        </div>
 
                     </div>
                 </div>
