@@ -31,7 +31,7 @@ const Navbar = () => {
                     <div className={activeClass === "About" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("About") }}> <Link to="/About">About</Link></div>
                     <div className={activeClass === "Contact" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Contact") }}>  <Link to="/Contact">Contact</Link></div>
                     <Link to="/login" className={activeClass === "Login" ? "auth-links active-auth" : "auth-links"} onClick={() => { handleClick(); setActiveClass("Login") }} ><MdLogin className='icons' />Login</Link>
-                    <Link to="/signup" className={activeClass === "Register" ? "auth-links active-auth" : "auth-links"} onClick={() => { handleClick(); setActiveClass("Register") }}><FaUserPlus className='icons' />Register</Link>
+                    <Link to="/signup" className={activeClass === "Register" ? "auth-links active-auth" : "auth-links"} onClick={() => { handleClick(); setActiveClass("Register") }}><FaUserPlus className='icons' />Sign Up</Link>
                     <Link to="/cart" className={activeClass === "Cart" ? "auth-links active-auth" : "auth-links"} onClick={() => { handleClick(); setActiveClass("Cart") }}><FaShoppingCart className='icons' />Cart({state.length})</Link>
                 </div>
                 {isMobile ? (
