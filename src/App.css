@@ -9,11 +9,20 @@
 /* Navbar css starts from here */
 
 .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
   font-weight: bold;
   font-family: 'Courgette', cursive;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: black;
+}
+
+.logo-img {
+  width: 55px;
+  height: 50px;
 }
 
 .navbar {
@@ -296,7 +305,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
+  margin-top: 3px;
 }
 
 .signup-box {
@@ -573,10 +583,9 @@
   background-color: white;
   border-radius: 4px;
   cursor: pointer;
-  /* margin-top: 10px; */
   font-family: 'Poppins', sans-serif;
   color: black;
-  /* margin-right: 20px; */
+
 }
 
 .button-btn:hover {
@@ -1074,6 +1083,11 @@
 
   }
 
+  .logo-img {
+    width: 45px;
+    height: 42px;
+  }
+
   .latest {
     width: 83%;
     font-size: 15px;
@@ -1172,6 +1186,11 @@
   .card-container {
     width: 260px;
     height: 400px;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 35px;
   }
 }
 
@@ -1297,7 +1316,7 @@
   .img-box,
   .box-img {
     width: 150px;
-    height: 175px;
+    height: 150px;
   }
 
   .button-btn {
@@ -1343,7 +1362,7 @@
   .img-box,
   .box-img {
     width: 100px;
-    height: 125px;
+    height: 110px;
   }
 
   .button-btn {
@@ -2066,6 +2085,7 @@
   .signup-container {
     flex-direction: column;
     height: fit-content;
+    margin-top: 0px;
   }
 
   .signup-box {

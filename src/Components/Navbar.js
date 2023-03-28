@@ -7,6 +7,7 @@ import { FaUserPlus } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 import { useSelector } from "react-redux"
+import Logoimg from '../assets/logo-img1.png'
 const Navbar = () => {
     const state = useSelector((state) => state.HandleCart)
     const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
@@ -23,7 +24,8 @@ const Navbar = () => {
         <>
             <nav className='navbar'>
                 <div className="logo">
-                    <span>NAWAB'S COLLECTION</span>
+                    <img src={Logoimg} alt="Logoimg" className='logo-img' />
+                    <span>UNIQUE COLLECTION</span>
                 </div>
                 <div className={isMobile ? (showMediaIcons ? "sideNav hidden" : "sideNav") : "navlink"}>
                     <div className={activeClass === "Home" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Home") }}><Link to="/">Home</Link></div>

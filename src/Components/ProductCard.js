@@ -11,7 +11,6 @@ const ProductCard = () => {
     const { id } = useParams()
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(false)
-    // const [cartBtn, setCartBtn] = useState("Add to cart")
     const state = useSelector((state) => state.HandleCart)
 
 

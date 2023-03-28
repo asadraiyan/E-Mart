@@ -6,12 +6,10 @@ import { GrClose } from "react-icons/gr";
 const Cart = () => {
     const state = useSelector((state) => state.HandleCart)
     const dispatch = useDispatch()
-    // console.log("state =", state)
-    const handleClose = (item) => {
-
-        const productList = state.filter(stateItem => stateItem.id !== item.id)
-        console.log("productList =", productList)
-        dispatch(removeProduct(productList))
+    console.log("state =", state)
+    const handleClose = (product) => {
+        console.log("product =", product)
+        dispatch(removeProduct(product))
     }
 
     const addItem = (product) => {
