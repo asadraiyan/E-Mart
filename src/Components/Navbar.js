@@ -14,9 +14,6 @@ const Navbar = () => {
     const [showMediaIcons, setshowMediaIcons] = useState(true)
     const [activeClass, setActiveClass] = useState("Home")
 
-    // console.log("state =", state)
-
-
     const handleClick = () => {
         setshowMediaIcons(!showMediaIcons)
     }
@@ -25,7 +22,7 @@ const Navbar = () => {
             <nav className='navbar'>
                 <div className="logo">
                     <img src={Logoimg} alt="Logoimg" className='logo-img' />
-                    <span>UNIQUE COLLECTION</span>
+                    <span ><Link to="/" className='unique'>UNIQUE COLLECTION</Link></span>
                 </div>
                 <div className={isMobile ? (showMediaIcons ? "sideNav hidden" : "sideNav") : "navlink"}>
                     <div className={activeClass === "Home" ? "active" : ""} onClick={() => { handleClick(); setActiveClass("Home") }}><Link to="/">Home</Link></div>

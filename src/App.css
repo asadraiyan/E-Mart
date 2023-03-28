@@ -25,6 +25,11 @@
   height: 50px;
 }
 
+.unique {
+  text-decoration: none;
+  color: black;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
