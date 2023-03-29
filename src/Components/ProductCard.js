@@ -22,7 +22,7 @@ const ProductCard = () => {
             setLoading(false)
         }
         getProduct()
-    }, [])
+    }, [id])
 
     const dispatch = useDispatch()
 
