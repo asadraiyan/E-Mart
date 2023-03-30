@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import { addCart, delCart, removeProduct } from "../Components/redux/action/Index"
 import { GrClose } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {
@@ -56,7 +57,7 @@ const Cart = () => {
         return (
             <>
                 <div className="proceed-container">
-                    <button className='proceed'>Proceed to check out</button>
+                    <Link to={"/checkout"} className='proceed'>Proceed to check out</Link>
                 </div>
             </>
         )

@@ -9,8 +9,7 @@ import ProductCard from './Components/ProductCard';
 import Cart from './Components/Cart';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
-
-
+import Checkout from './Components/Checkout';
 
 function App() {
   return (
@@ -22,6 +21,7 @@ function App() {
           <Route exact path="/Products" element={<Products />} />
           <Route path="/Product/:id" element={<ProductCard />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route exact path="/About" element={<About />} />
