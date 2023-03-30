@@ -53,7 +53,7 @@ const Products = () => {
 	return (
 		<div className='product-container'>
 			<div className="latest">
-				<h1>Latest Products</h1><hr />
+				<h1>Latest Collections</h1><hr />
 			</div>
 			<div className="boxes">
 				{loading ? <Loader /> : <ShowProducts />}

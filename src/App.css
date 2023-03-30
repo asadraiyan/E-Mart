@@ -1564,7 +1564,7 @@
 
   .heading {
     font-size: 1.2rem;
-    letter-spacing: 0.5px;
+    letter-spacing: 0px
   }
 
   .paragraph {
@@ -1578,6 +1578,9 @@
 
   .content {
     top: 22%;
+    /* word-wrap: break-word; */
+    width: 160px;
+    margin-left: 5px;
   }
 
   .card-img {

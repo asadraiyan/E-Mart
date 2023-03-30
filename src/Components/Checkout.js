@@ -7,8 +7,8 @@ const Checkout = () => {
 
     let total = 0
     const itemList = (item) => {
-        total = total + item.price;
         let itemTotal = item.qty * item.price
+        total = total + itemTotal;
         return (
             <li className="list-1">
                 <div className='productlist-1'>
@@ -36,7 +36,7 @@ const Checkout = () => {
                             <li className="list-1">
                                 <div className='totaUSD'>
                                     <span>Total (USD)</span>
-                                    <strong>$ {total}</strong>
+                                    <strong>$ {total.toFixed(2)}</strong>
                                 </div>
                             </li>
                         </ul>
