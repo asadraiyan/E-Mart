@@ -5,7 +5,6 @@ import Loader from './Loader';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import { addCart, delCart } from './redux/action/Index';
-import { BiArrowBack } from "react-icons/bi";
 
 const ProductCard = () => {
     const { id } = useParams()
@@ -43,7 +42,6 @@ const ProductCard = () => {
     const ShowProduct = () => {
         return (
             <>
-                <Link to="/Products"><BiArrowBack className="go-back" /></Link>
                 <div className="box-container">
                     <div className="img-box">
                         <img src={product.image} className='box-img' alt={product.title} />

@@ -31,8 +31,6 @@ const Checkout = () => {
                         </div>
                         <ul className="list-group">
                             {state.map(itemList)}
-
-
                             <li className="list-1">
                                 <div className='totaUSD'>
                                     <span>Total (USD)</span>
