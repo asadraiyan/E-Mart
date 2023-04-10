@@ -16,7 +16,13 @@ export const delCart = (product) => {
 
 export const removeProduct = (product) => {
     return {
-        type: "REMOVEITEM",
+        type: "REMOVE_PRODUCT",
         payload: product
+    }
+}
+
+export const emptyCart = () => {
+    return {
+        type: "REMOVE_ALL"
     }
 }

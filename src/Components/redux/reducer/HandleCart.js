@@ -34,8 +34,11 @@ const HandleCart = (state = cart, action) => {
                 return state.map((x) => x.id === product.id ? { ...x, qty: x.qty - 1 } : x)
             }
         // break;
-        case "REMOVEITEM":
+        case "REMOVE_PRODUCT":
             return state.filter(stateItem => stateItem.id !== product.id)
+
+        case "REMOVE_ALL":
+            return []
         // break;
 
         default:

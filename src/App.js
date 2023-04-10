@@ -10,8 +10,17 @@ import Cart from './Components/Cart';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Checkout from './Components/Checkout';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+
+  const notificationHandler = (message) => {
+    toast[message.status](message.text, {
+      position: message.position
+    })
+  }
+
   return (
     <Router>
       <div>
@@ -21,13 +30,14 @@ function App() {
           <Route exact path="/Products" element={<Products />} />
           <Route path="/Product/:id" element={<ProductCard />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout notify={notificationHandler} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route exact path="/About" element={<About />} />
           <Route exact path="/Contact" element={<Contact />} />
         </Routes>
       </div>
+      <ToastContainer />
     </Router>
   );
 }
