@@ -941,11 +941,12 @@
   display: flex;
   flex-direction: column;
   width: 525px;
-  height: 450px;
+  height: 440px;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   margin-top: 50px;
   margin-right: 25px;
+  margin-bottom: 25px;
 }
 
 .txt {
