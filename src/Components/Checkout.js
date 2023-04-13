@@ -6,9 +6,8 @@ import { emptyCart } from "../Components/redux/action/Index"
 const Checkout = ({ notify }) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    console.log(navigate)
     const state = useSelector((state) => state.HandleCart)
-    console.log("state =", state)
+    // console.log("state =", state)
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",

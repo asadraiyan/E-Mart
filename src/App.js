@@ -10,6 +10,7 @@ import Cart from './Components/Cart';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Checkout from './Components/Checkout';
+import Footer from './Components/Footer';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -36,6 +37,7 @@ function App() {
           <Route exact path="/About" element={<About />} />
           <Route exact path="/Contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
       <ToastContainer />
     </Router>
